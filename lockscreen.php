@@ -15,13 +15,13 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- AdminLTE -->
-    <link rel="stylesheet" href="<?php echo get_url(); ?>/panel/theme/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="<?php echo get_url(); ?>/theme/dist/css/AdminLTE.min.css">
     <!-- Bootstrap.css -->
-    <link rel="stylesheet" href="<?php echo get_url(); ?>/panel/theme/css/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo get_url(); ?>/theme/css/bootstrap.css">
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- jQuery 2.1.4 -->
-    <script src="<?php echo get_url(); ?>/panel/theme/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="<?php echo get_url(); ?>/theme/plugins/jQuery/jQuery-2.1.4.min.js"></script>
     <!-- focus -->
     <script type="text/javascript"> $(document).ready(function(){ $('.form-control').focus();} ); </script>
   </head>
@@ -45,9 +45,9 @@
             if($lockscreen == $password)
             {
               $_SESSION['login'] = true;
-              header("Location: ". get_url() ."/panel");
+              header("Location: ". get_url());
             }else{
-              header("Location: ". get_url() ."/panel/lockscreen.php");
+              header("Location: ". get_url() ."/lockscreen.php");
             }
           }
          ?>

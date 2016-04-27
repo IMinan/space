@@ -46,38 +46,38 @@
         </li>
 
         <li>
-          <a href="<?php echo get_url(); ?>/panel/editor/file_list.php">
-            <i class="fa fa-code"></i> <span>Code</span>
+          <a href="<?php echo get_url(); ?>/editor/file_list.php">
+            <i class="fa fa-code"></i> <span>Htdocs</span>
           </a>
         </li>
 
         <li>
-          <a href="<?php echo get_url(); ?>/panel/un_session.php">
+          <a href="<?php echo get_url(); ?>/un_session.php">
             <i class="fa fa-adjust"></i> <span>sleep</span>
           </a>
         </li>
 
         <li>
-          <a href="<?php echo get_url(); ?>/panel/cleander.php">
+          <a href="<?php echo get_url(); ?>/calendar.php">
             <i class="fa fa-calendar"></i> <span>calendar</span>
           </a>
         </li>
 
         <li>
-          <a href="<?php echo get_url(); ?>/panel/note.php">
+          <a href="<?php echo get_url(); ?>/note.php">
             <i class="fa fa-edit"></i> <span>Note</span>
           </a>
         </li>
 
         <li>
-          <a href="<?php echo get_url(); ?>/panel/message.php">
+          <a href="<?php echo get_url(); ?>/message.php">
             <i class="fa fa-comments"></i> <span>Message</span>
             <small class="label pull-right bg-green">0</small>
           </a>
         </li>
 
         <li>
-          <a href="<?php echo get_url(); ?>/panel/mail.php">
+          <a href="<?php echo get_url(); ?>/mail.php">
             <i class="fa fa-envelope"></i> <span>Mailbox</span>
             <small class="label pull-right bg-yellow">0</small>
           </a>

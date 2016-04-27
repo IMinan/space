@@ -97,7 +97,7 @@
                       var total = input + '.' + kind;
                       var new_input = input.val();
 
-  
+
                       if(input.val().indexOf('.php') > -1)
                       {
                         new_input = new_input.replace(".php", "");
@@ -149,7 +149,7 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             <input type="submit" class="btn btn-primary" value="submit">
-          
+
           </div><!--/ .modal-footer /-->
         </div><!--/ .modal-content /-->
         </form>
@@ -168,7 +168,7 @@
           <div class="modal-body">
             <div class="h30"></div>
 
-          
+
            <div class="col-md-3"></div>
 
             <div class="col-md-6">
@@ -176,12 +176,12 @@
             </div><!--/ .col-m-8 /-->
 
             <div class="h60"></div>
-          
+
           </div><!--/ .modal-body /-->
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             <input type="submit" value="Submit" class="btn btn-primary">
-          
+
           </div><!--/ .modal-footer /-->
         </div><!--/ .modal-content /-->
       </div><!--/ .modal-dialog /-->
@@ -346,5 +346,6 @@
     .js { width: 32px !important; background-size: 32px 32px;  height: 32px; display: inline-block; background-repeat: no-repeat; background-image: url( http://www.javatpoint.com/images/javascript/javascript_logo.png ) ; }
     .html { width: 32px !important; background-size: 32px 32px;  height: 32px; display: inline-block; background-repeat: no-repeat; background-image: url( https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png ) ; }
     .css { width: 32px !important; background-size: 32px 32px;  height: 32px; display: inline-block; background-repeat: no-repeat; background-image: url( http://www.cemuslu.com/resim/blog/css/css3-logo.png ) ; }
+    .php { width: 32px !important; background-size: 32px 32px;  height: 32px; display: inline-block; background-repeat: no-repeat; background-image: url( http://p1edr4.com/img/php_logo.png ) ; }
   </style>
 <?php include '../theme/footer.php'; // header.php ?>

@@ -15,7 +15,7 @@
 
 function get_url()
 {
-  $url = 'http://'.$_SERVER['SERVER_NAME'].'/workspace';
+  $url = 'http://'.$_SERVER['SERVER_NAME'].'/space';
   return $url;
 }
 
@@ -177,9 +177,13 @@ function codeMirror_script($file)
   {
     return "htmlmixed";
   }
-  else if($extension == 'css')
+  elseif($extension == 'css')
   {
     return "css";
+  }
+  elseif($extension == 'php')
+  {
+    return "php";
   }
   else
   {
@@ -216,18 +220,20 @@ function get_editor_script()
   <script src="mode/javascript/javascript.js"></script>
   <script src="mode/htmlmixed/htmlmixed.js"></script>
   <script src="mode/css/css.js"></script>
+  <script src="mode/clike/clike.js"></script>
+  <script src="mode/php/php.js"></script>
   <script src="mode/vbscript/vbscript.js"></script>
   <script src="mode/htmlmixed/htmlmixed.js"></script>
   <script src="keymap/sublime.js"></script>
   <link rel="stylesheet" href="theme/monokai.css">
-  <link rel="stylesheet" href="'.get_url()  .'/panel/theme/css/panel.css">';
+  <link rel="stylesheet" href="'.get_url()  .'/theme/css/panel.css">';
 }
 
 
 function get_file_css()
 {
-  return '<link rel="stylesheet" href="'. get_url()  .'/panel/theme/css/file.css" media="screen" title="no title" charset="utf-8">
-  <link rel="stylesheet" href="'.get_url()  .'/panel/theme/css/bootstrap.css">';
+  return '<link rel="stylesheet" href="'. get_url()  .'/theme/css/file.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="'.get_url()  .'/theme/css/bootstrap.css">';
 }
 /*
 @name: get_calendar_script
@@ -238,11 +244,11 @@ function get_file_css()
 function get_calendar_script()
 {
   return '<!-- calendar css -->
-  <link rel="stylesheet" href="'.get_url()  .'/panel/theme/css/fullcalendar.min.css">
+  <link rel="stylesheet" href="'.get_url()  .'/theme/css/fullcalendar.min.css">
   <!-- calendar css -->
-  <link rel="stylesheet" href="'.get_url()  .'/panel/theme/css/fullcalendar.print.css" media="print">
-  <script src="'.get_url()  .'/panel/theme/js/moment.min.js"></script>
-  <script src="'.get_url()  .'/panel/theme/js/fullcalendar.min.js"></script>';
+  <link rel="stylesheet" href="'.get_url()  .'/theme/css/fullcalendar.print.css" media="print">
+  <script src="'.get_url()  .'/theme/js/moment.min.js"></script>
+  <script src="'.get_url()  .'/theme/js/fullcalendar.min.js"></script>';
 }
 
 
@@ -260,7 +266,7 @@ function is_login()
 
   }else
   {
-    header("Location: ". get_url() ."/panel/lockscreen.php");
+    header("Location: ". get_url() ."/lockscreen.php");
   }
 }
 
@@ -292,7 +298,7 @@ class DirectoryListing {
   */
 
   // The top level directory where this script is located, or alternatively one of it's sub-directories
-  public $startDirectory = '.';
+  public $startDirectory = '../.././';
 
   // An optional title to show in the address bar and at the top of your page (set to null to leave blank)
   public $pageTitle = 'Evoluted Directory Listing Script';
@@ -366,7 +372,14 @@ class DirectoryListing {
     'application/vnd.ms-excel',
     'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', // MS Excel (modern)
     'application/zip',
-    'application/x-tar'
+    'application/x-tar',
+    'text/php',
+    'text/x-php',
+    'application/php',
+    'application/x-php',
+    'application/x-httpd-php',
+    'application/x-httpd-php-source',
+
   );
 
   // Set to true to unzip any zip files that are uploaded (note - will overwrite files of the same name!)
@@ -395,7 +408,6 @@ class DirectoryListing {
 
   // File extensions to block from showing in the directory listing
   public $ignoredFileExtensions = array(
-    'php',
     'ini',
   );
 
@@ -845,9 +857,6 @@ class DirectoryListing {
 
   private function __scanDir($dir) {
     // Prevent browsing up the directory path.
-    if (strstr($dir, '../')) {
-      return false;
-    }
 
     if ($dir == '/') {
       $dir = $this->startDirectory;
@@ -1022,7 +1031,7 @@ class DirectoryListing {
     $dirString = $this->__currentDirectory;
     $directoryTree = array();
 
-    $directoryTree['./'] = 'Index';
+    $directoryTree['../.././'] = 'htdocs';
 
     if (substr_count($dirString, '/') >= 0) {
       $items = explode("/", $dirString);
@@ -1163,6 +1172,7 @@ function pr($data, $die = false) {
     die();
   }
 }
+
 
 
 

@@ -16,6 +16,7 @@
       ["lang", /(javascript|babel)/i, "javascript"],
       ["type", /^(?:text|application)\/(?:x-)?(?:java|ecma)script$|^$/i, "javascript"],
       ["type", /./, "text/plain"],
+      ["type", /./, "text/x-php"],
       [null, null, "javascript"]
     ],
     style:  [

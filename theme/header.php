@@ -20,13 +20,18 @@
     <?php include 'head.php'; ?>
   </head>
   <body class="hold-transition skin-green sidebar-mini">
+  <div class="wait"></div>
+  <div id="code_alert" class="success">
+    <div><img src="https://bigfix.me/content/loading.gif" alt=""  style="width: 50px; height: 50px; margin-top: -20px;"/></div>
+  </div>
+  
     <div id="code_alert" class="success">
       <div><i class="fa fa-check"></i></div>
     </div>
     <div class="wrapper">
       <header class="main-header">
         <!-- Logo -->
-        <a href="<?php echo get_url(); ?>/panel/index.php" class="logo">
+        <a href="<?php echo get_url(); ?>/index.php" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>F</b>C</span>
           <!-- logo for regular state and mobile devices -->

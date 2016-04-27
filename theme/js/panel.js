@@ -6,7 +6,8 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   keyMap: "sublime",
   theme: "monokai",
   matchBrackets: true,
-  tabSize: 2
+  tabSize: 2,
+
 });
 
 $(window).keypress(function(event) {
@@ -41,9 +42,13 @@ $(window).keydown(function (e){
       data: 'file_way='+file_way+'&code='+code,
       success:function(comment)
       {
-        $("#code_alert").fadeIn(500);
+        $("#code_alert").stop().fadeIn(500);
+        $(".wait").show();
+        $(".wait").css({'cursor' : 'wait'});
         setInterval(function(){
-          $("#code_alert").fadeOut(1500);
+          $("#code_alert").fadeOut(1000);
+          $(".wait").css({'cursor' : 'wait'});
+          $(".wait").fadeOut(500);
         }, 500);
       }
     });
@@ -89,3 +94,5 @@ $(document).ready(function(){
 	$(".validate_3").validate();
 	$(".validate_4").validate();
 });
+
+/**/

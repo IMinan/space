@@ -6,7 +6,7 @@
       <?php echo get_editor_script(); ?>
       <style media="screen">body{overflow: hidden; width: 100%; height: 100%;}</style>
 
-      <?php if(isset($_GET['file'])){ $file = $_GET['file']; ?>
+      <?php if(isset($_GET['file'])): $file = $_GET['file']; ?>
 
        <script type="text/javascript">
           var mixedMode = {
@@ -30,7 +30,8 @@
           <textarea style='margin: 0; background: #222d32; z-index: -2; display: block; opacity: 0; line-height: 0; border: 0; background: #222; padding: 0;' id="code" rows="8" cols="40" name="code"><?php code_install($file); ?></textarea>
         </article>
       </form>
-      <?php  } ?>
+
+      <?php endif; ?>
     </div><!--/ .area /-->
   </div><!--/ .content-wrapper /-->
 <?php include '../theme/footer.php'; // footer.php ?>

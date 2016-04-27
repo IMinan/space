@@ -3,7 +3,7 @@
 
   <?php echo get_calendar_script(); ?>
 
- <div id="calendar" class="content-wrapper">
+ <div class="content-wrapper">
    <script>
   	$(document).ready(function() {
       var dateObj = new Date();

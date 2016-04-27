@@ -110,6 +110,22 @@ ul {
 /*--------------------------------------------------------------------*/
 /* General
 /*--------------------------------------------------------------------*/
+/* code update Load effet */
+.wait{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999999999;
+  background: none;
+  display: none;
+}
+
+#code_alert{
+  z-index: 9999999999;
+}
+
 /* header */
 .header-start {
   background: #5fcf80;
@@ -141,7 +157,6 @@ ul {
   font-size: 20px; }
 
 .main-footer{
-  position: absolute;
   bottom: 0;
   width: 100%;
 }
@@ -280,11 +295,14 @@ ul {
   z-index: 9999;
 }
 
-/* #code */
-.CodeMirror { font-size: 12px; padding-bottom: 150px; z-index: 999999; background: #222d32 !important; }
-.CodeMirror-linenumbers { padding: 0 8px; }
-.CodeMirror-scroll { height: 100%;  z-index: 9999; }
-.CodeMirror-gutter{ background: #222d32 !important; }
+/* calendar */
+#calendar{
+  width: 700px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* icon */
 
 .fullwidth-area{
@@ -392,6 +410,10 @@ ul {
   .navbar.left-menu ul li a span{
     display: inline-block;
   }
+
+  #calendar{
+    width: 100%;
+  }
 }
 
 
@@ -415,6 +437,29 @@ label.error {
     margin-left: -20px;
 }
 
+/* editor */
+.cm-s-monokai span.cm-bracket{
+  color: #efefef;
+}
+
+.cm-s-monokai span.cm-variable-2{
+  color: #efefef;
+}
+
+.cm-qualifier{
+  color: #a6e22e;
+}
+
+.cm-s-monokai span.cm-property{
+  color: #57C3DD;
+}
+
+
+
+.CodeMirror { color: #fff !important; font-size: 12px; padding-bottom: 150px; z-index: 999999; background: #222d32 !important; font-weight: bold; font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier; }
+.CodeMirror-linenumbers { padding: 0 8px; }
+.CodeMirror-scroll { height: 100%;  z-index: 9999; }
+.CodeMirror-gutter{ background: #222d32 !important; }
 
 /*--------------------------------------------------------------------*/
 /* App
